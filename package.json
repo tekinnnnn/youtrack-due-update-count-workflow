@@ -1,0 +1,17 @@
+{
+  "name" : "due-update",
+  "title" : "Due Update",
+  "description" : "YouTrack module counts the number of due update",
+  "author": {
+    "email": "tekin.aydogdu@map.com.tr",
+    "name": "Tekin Aydoğdu"
+  },
+  "version": "1.0.0",
+  "dependencies" : {
+    "@jetbrains/youtrack-scripting-api" : "latest"
+  },
+  "youtrack" : {
+    "autoAttached" : true,
+    "readOnly" : false
+  }
+}
