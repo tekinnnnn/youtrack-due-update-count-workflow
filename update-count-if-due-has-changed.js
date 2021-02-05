@@ -11,16 +11,25 @@ const entities = require('@jetbrains/youtrack-scripting-api/entities');
 exports.rule = entities.Issue.onChange({
   title: 'update-count-if-due-has-changed',
   guard: function(ctx) {
-    return ctx.issue.fields.isChanged(ctx.DueDate) && ctx.issue.fields.DueDate;
+    return ctx.issue.fields.isChanged(ctx.DueDate);
   },
   action: function(ctx) {
     const issue = ctx.issue;
 
-    if (null === issue.fields.DueUpdate || '' === issue.fields.DueUpdate) {
+    if ((1 > issue.fields.DueUpdate || null === issue.fields.DueUpdate) && null === issue.oldValue(ctx.DueDate)) {
+      issue.fields.DueUpdate = 0;
+      return;
+    }
+
+    if (null === issue.fields.DueDate) {
+      return;
+    }
+
+    if (null === issue.fields.DueUpdate) {
       issue.fields.DueUpdate = 0;
     }
 
-    issue.fields.DueUpdate = issue.fields.DueUpdate + 1;
+    issue.fields.DueUpdate += 1;
   },
   requirements: {
     DueUpdate: {
