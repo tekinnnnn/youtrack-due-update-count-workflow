@@ -1,10 +1,10 @@
 {
-  "name" : "due-update",
-  "title" : "Due Update",
+  "name" : "youtrack-due-update-count-workflow",
+  "title" : "JetBrains YouTrack Due Update Count Workflow",
   "description" : "YouTrack module counts the number of due update",
   "author": {
     "email": "tekin.aydogdu@map.com.tr",
-    "name": "Tekin Aydoğdu"
+    "name": "tekinnnnn"
   },
   "version": "1.0.0",
   "dependencies" : {
@@ -13,5 +13,8 @@
   "youtrack" : {
     "autoAttached" : true,
     "readOnly" : false
+  },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
   }
 }
