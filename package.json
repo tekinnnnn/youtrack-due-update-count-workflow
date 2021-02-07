@@ -7,18 +7,18 @@
     "name": "tekinnnnn"
   },
   "version": "1.0.0",
-  "dependencies": {
-    "@jetbrains/youtrack-scripting-api": "latest"
-  },
   "youtrack": {
     "autoAttached": true,
     "readOnly": false
   },
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/tekinnnnn/youtrack-due-update-count-workflow.git"
+  },
+  "devDependencies": {
+    "@jetbrains/youtrack-scripting-api": "latest"
   }
 }
