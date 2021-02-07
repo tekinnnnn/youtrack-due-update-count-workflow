@@ -1,5 +1,5 @@
 {
-  "name": "youtrack-due-update-count-workflow",
+  "name": "@tekinnnnn/youtrack-due-update-count-workflow",
   "title": "JetBrains YouTrack Due Update Count Workflow",
   "description": "YouTrack module counts the number of due update",
   "author": {
@@ -15,7 +15,7 @@
     "readOnly": false
   },
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com/tekinnnnn"
+    "registry":"https://npm.pkg.github.com"
   },
   "repository": {
     "type": "git",
