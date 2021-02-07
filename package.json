@@ -16,5 +16,9 @@
   },
   "publishConfig": {
     "registry":"https://npm.pkg.github.com/tekinnnnn"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tekinnnnn/youtrack-due-update-count-workflow.git"
   }
 }
