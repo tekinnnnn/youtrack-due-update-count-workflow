@@ -14,7 +14,7 @@ exports.rule = entities.Issue.onChange({
     return ctx.issue.fields.isChanged(ctx.DueDate);
   },
   action: function(ctx) {
-    const issue = ctx.issue;
+    const { issue } = ctx;
 
     if ((issue.fields.DueUpdate < 1 || issue.fields.DueUpdate === null) && issue.oldValue(ctx.DueDate) === null) {
       issue.fields.DueUpdate = 0;
