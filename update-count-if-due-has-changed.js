@@ -16,16 +16,16 @@ exports.rule = entities.Issue.onChange({
   action: function(ctx) {
     const issue = ctx.issue;
 
-    if ((1 > issue.fields.DueUpdate || null === issue.fields.DueUpdate) && null === issue.oldValue(ctx.DueDate)) {
+    if ((issue.fields.DueUpdate < 1 || issue.fields.DueUpdate === null) && issue.oldValue(ctx.DueDate) === null) {
       issue.fields.DueUpdate = 0;
       return;
     }
 
-    if (null === issue.fields.DueDate) {
+    if (issue.fields.DueDate === null) {
       return;
     }
 
-    if (null === issue.fields.DueUpdate) {
+    if (issue.fields.DueUpdate === null) {
       issue.fields.DueUpdate = 0;
     }
 
